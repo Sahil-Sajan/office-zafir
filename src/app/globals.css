@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-n-0: #FAF6EA;
+  --color-n-50: #F0EADB;
+  --color-n-100: #F0EADB;
+  --color-n-200: #F0EADB;
+  --color-n-300: #C9A853;
+  --color-n-400: #5B6961;
+  --color-n-500: #5B6961;
+  --color-n-600: #1C2420;
+  --color-n-700: #332F27;
+  --color-n-800: #211E19;
+  --color-n-900: #0E241C;
+
+  --color-brass: #17362A;
+  --color-brass-dark: #234A3A;
+  --color-brass-tint: #F0EADB;
+  --color-brass-glow: rgba(23, 54, 42, 0.28);
+  --color-emerald: #17362A;
+  --color-emerald-tint: #F0EADB;
+  --color-red-accent: #B3422F;
+
+  --color-surface: #FFFFFF;
+  --color-border: #F0EADB;
+
+  --radius-s: 6px;
+  --radius-m: 10px;
+  --radius-l: 16px;
+
+  --shadow-1: 0 1px 2px rgba(14, 36, 28, 0.06), 0 1px 1px rgba(14, 36, 28, 0.04);
+  --shadow-2: 0 8px 24px rgba(14, 36, 28, 0.08);
+
+  --font-sans: var(--font-inter);
+  --font-arabic: var(--font-noto-arabic);
+}
+
+body {
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes floatSlow {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulseRing {
+  0% {
+    box-shadow: 0 0 0 0 var(--color-brass-glow);
+  }
+
+  100% {
+    box-shadow: 0 0 0 10px rgba(23, 54, 42, 0);
+  }
+}
+
+@keyframes chatbotIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+}
