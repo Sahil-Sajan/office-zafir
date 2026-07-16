@@ -10,8 +10,8 @@ const chips = [
 
 export default function Marquee() {
   return (
-    <div className="border-b border-[#F0EADB] py-3 sm:py-[18px] overflow-hidden">
-      <div dir="ltr" className="flex w-max animate-[marquee_30s_linear_infinite]">
+    <div dir="ltr" className="border-b border-[#F0EADB] py-3 sm:py-[18px] overflow-hidden">
+      <div className="flex w-max animate-[marquee_30s_linear_infinite]">
         <MarqueeTrack />
         <MarqueeTrack />
       </div>

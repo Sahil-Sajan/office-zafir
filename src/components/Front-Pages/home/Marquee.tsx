@@ -13,8 +13,8 @@ export default function MarqueeBar({ home }: MarqueeProps) {
   ];
 
   return (
-    <div className="overflow-hidden py-3 sm:py-[18px] border-b border-[#F0EADB] mask-[linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
-      <div dir="ltr" className="flex w-max animate-[marquee_28s_linear_infinite] hover:[animation-play-state:paused]">
+    <div dir="ltr" className="overflow-hidden py-3 sm:py-[18px] border-b border-[#F0EADB] mask-[linear-gradient(90deg,transparent,#000_8%,#000_92%,transparent)]">
+      <div className="flex w-max animate-[marquee_28s_linear_infinite] hover:[animation-play-state:paused]">
         <MarqueeTrack chips={chips} />
         <MarqueeTrack chips={chips} />
       </div>

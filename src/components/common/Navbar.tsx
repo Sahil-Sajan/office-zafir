@@ -128,7 +128,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
               href={`/${lang}/login`}
               className="flex-none inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-[6px] text-[0.85rem] font-semibold bg-[#17362A] text-white no-underline whitespace-nowrap hover:bg-[#234A3A] hover:-translate-y-[1px] hover:shadow-[0_8px_20px_rgba(23,54,42,0.28)] transition-all duration-150"
             >
-              Login
+              {nav["topnav.login"] ?? "Login"}
             </Link>
           </div>
 
@@ -240,7 +240,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
             className="flex-1 inline-flex items-center justify-center gap-2 px-3 py-1.5 rounded-[6px] text-[0.85rem] font-semibold bg-[#17362A] text-white no-underline hover:bg-[#234A3A] transition-all duration-150 text-center whitespace-nowrap"
             onClick={() => setMobileOpen(false)}
           >
-            Login
+            {nav["topnav.login"] ?? "Login"}
           </Link>
         </div>
       </div>
