@@ -18,7 +18,7 @@ const steps = [
 
 export default function HowItWorks() {
     return (
-        <section className="py-14  sm:py-20 bg-[#F0EADB] border-t border-[#F0EADB]">
+        <section className="py-14  sm:py-20 bg-[#F0EADB]/40 border-t border-[#F0EADB]">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-9">
                     <div>

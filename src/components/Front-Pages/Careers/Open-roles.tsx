@@ -11,7 +11,7 @@ const roles = [
 
 export default function OpenRoles() {
   return (
-    <section id="open-roles" className="bg-[#F0EADB] border-y border-[#F0EADB] py-16 mb-5">
+    <section id="open-roles" className="bg-[#F0EADB]/40 border-y border-[#F0EADB] py-16">
       <div className="max-w-[1180px] mx-auto px-7">
         <div className="mb-9">
           <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">

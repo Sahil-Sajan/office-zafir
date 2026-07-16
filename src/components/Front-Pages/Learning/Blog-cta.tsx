@@ -1,6 +1,6 @@
 export default function BlogCta() {
   return (
-    <section className="bg-[#F0EADB] border-t border-[#F0EADB] py-12 sm:py-16">
+    <section className="bg-[#F0EADB]/40 border-t border-[#F0EADB] py-12 sm:py-16">
       <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
         <div className="bg-[#0E241C] text-white rounded-[16px] p-6 sm:p-[52px] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 flex-wrap">
           <div>

@@ -2,7 +2,7 @@
 
 export default function ContactForm() {
     return (
-        <section className="py-12 sm:py-16 border-t border-[#F0EADB] border-b border-[#F0EADB] bg-[#F0EADB]">
+        <section className="py-12 sm:py-16 border-t border-[#F0EADB] border-b border-[#F0EADB] bg-[#F0EADB]/40">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7 flex flex-col items-center">
                 <div className="flex flex-col items-center text-center gap-6 mb-9 max-w-[720px]">
                     <div>

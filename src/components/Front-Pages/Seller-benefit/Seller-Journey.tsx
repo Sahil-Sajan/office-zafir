@@ -32,7 +32,7 @@ export default function SellerJourney() {
                     </div>
                 </div>
                 <div className="relative pl-9">
-                    <div className="absolute left-[11px] top-[6px] bottom-[6px] w-[2px] bg-[#F0EADB]" />
+                    <div className="absolute left-[11px] top-[6px] bottom-[6px] w-[2px] bg-[#F0EADB]/40" />
                     {steps.map((s) => (
                         <div key={s.title} className="relative pb-8 last:pb-0">
                             <div className="absolute left-[-36px] top-[2px] w-6 h-6 rounded-full border-2 border-[#17362A] bg-[#F0EADB]" />

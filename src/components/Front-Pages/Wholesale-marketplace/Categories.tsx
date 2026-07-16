@@ -22,7 +22,7 @@ export default function WholesaleCategories() {
                             Six high-demand <span className="text-[#C9A853] italic">wholesale verticals.</span>
                         </h2>
                     </div>
-                    <p className="text-[1.1rem] text-[#1C2420] max-w-[640px] leading-[1.65]">
+                    <p className="text-[1.1rem] text-[#1C2420] max-w-[600px] leading-[1.65]">
                         Every supplier is Zafir360-verified and rated by buyers after every order.
                     </p>
                 </div>

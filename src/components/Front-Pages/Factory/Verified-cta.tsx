@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function VerifiedCta() {
   return (
-    <section className="bg-[#F0EADB] border-t border-[#F0EADB] py-16">
+    <section className="bg-[#F0EADB]/40 border-t border-[#F0EADB] py-16">
       <div className="max-w-[1180px] mx-auto px-7">
         <div className="bg-[#0E241C] text-white rounded-[16px] p-[52px] flex items-center justify-between gap-8 flex-wrap">
           <div>

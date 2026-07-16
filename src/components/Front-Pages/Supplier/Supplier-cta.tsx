@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function SupplierCTA() {
     return (
-        <section className="py-12 sm:py-16 border-t border-[#F0EADB] border-b border-[#F0EADB] bg-[#F0EADB]">
+        <section className="py-12 sm:py-16 border-t border-[#F0EADB] border-b border-[#F0EADB] bg-[#F0EADB]/40">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="bg-[#0E241C] rounded-[16px] p-6 sm:p-[52px] flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 sm:gap-8 flex-wrap text-[#FAF6EA]">
                     <div>

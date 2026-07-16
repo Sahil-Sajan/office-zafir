@@ -1,6 +1,6 @@
 export default function ProfileSample() {
   return (
-    <section className="bg-[#F0EADB] border-t border-[#F0EADB] py-12 sm:py-16">
+    <section className="bg-[#F0EADB]/40 border-t border-[#F0EADB] py-12 sm:py-16">
       <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
         <div className="mb-9">
           <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">
