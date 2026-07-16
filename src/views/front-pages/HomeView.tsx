@@ -21,7 +21,7 @@ export function HomeView({ lang, home }: HomeViewProps) {
       <MarqueeBar home={home} />
       <SimpleSteps home={home} />
       <ProductGrid home={home} lang={lang} />
-      <Recommended lang={lang} />
+      <Recommended lang={lang} home={home} />
       <BentoGrid home={home} />
       <ComparisonCarousel home={home} />
       <FeatureGrid home={home} />

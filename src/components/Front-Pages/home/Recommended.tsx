@@ -1,10 +1,16 @@
 import Link from "next/link";
 import { getAllProducts, ProductData } from "@/components/Front-Pages/Product/products-data";
 
-const tierTags: Record<ProductData["tier"], { label: string; color: string }> = {
-  retail: { label: "Retail", color: "bg-[#1F5C4D] text-white" },
-  marketplace: { label: "Seller Marketplace", color: "bg-[#C9A853] text-[#1C2420]" },
-  wholesale: { label: "Wholesale", color: "bg-[#17362A] text-white" },
+const tierTagColors: Record<ProductData["tier"], string> = {
+  retail: "bg-[#1F5C4D] text-white",
+  marketplace: "bg-[#C9A853] text-[#1C2420]",
+  wholesale: "bg-[#17362A] text-white",
+};
+
+const tierTagFallback: Record<ProductData["tier"], string> = {
+  retail: "Retail",
+  marketplace: "Seller Marketplace",
+  wholesale: "Wholesale",
 };
 
 function seededPick(products: ProductData[], count: number) {
@@ -16,7 +22,8 @@ function seededPick(products: ProductData[], count: number) {
   return withKey.sort((a, b) => a.key - b.key).slice(0, count).map((x) => x.p);
 }
 
-export default function Recommended({ lang }: { lang: string }) {
+export default function Recommended({ lang, home }: { lang: string; home: Record<string, string> }) {
+  const t = (key: string, fallback: string) => home[key] ?? fallback;
   const picks = seededPick(getAllProducts(), 4);
 
   return (
@@ -25,17 +32,17 @@ export default function Recommended({ lang }: { lang: string }) {
         <div className="flex items-end justify-between gap-4 flex-wrap mb-9">
           <div>
             <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">
-              Picked across the marketplace
+              {t("recommended.eyebrow", "Picked across the marketplace")}
             </span>
             <h2 className="text-[clamp(1.6rem,1.35rem+1vw,2.3rem)] font-bold tracking-[-0.02em] leading-[1.1] mt-[10px] text-[#0E241C]">
-              Recommended <span className="text-[#C9A853] italic">for you.</span>
+              {t("recommended.title", "Recommended")} <span className="text-[#C9A853] italic">{t("recommended.titleGold", "for you.")}</span>
             </h2>
           </div>
           <Link
             href={`/${lang}/categories`}
             className="text-[0.85rem] font-semibold text-[#17362A] no-underline hover:text-[#234A3A] whitespace-nowrap"
           >
-            Browse all products →
+            {t("recommended.browseAll", "Browse all products →")}
           </Link>
         </div>
 
@@ -53,10 +60,10 @@ export default function Recommended({ lang }: { lang: string }) {
                 </span>
               </div>
               <div className="p-4">
-                <span className={`inline-block mb-1.5 ${tierTags[p.tier].color} text-[0.6rem] font-bold uppercase tracking-[0.03em] px-1.5 py-[2px] rounded`}>
-                  {tierTags[p.tier].label}
+                <span className={`inline-block mb-1.5 ${tierTagColors[p.tier]} text-[0.6rem] font-bold uppercase tracking-[0.03em] px-1.5 py-[2px] rounded`}>
+                  {t(`recommended.tier.${p.tier}`, tierTagFallback[p.tier])}
                 </span>
-                <div className="text-[0.72rem] text-[#1C2420]">{p.origin} · Lead time {p.leadTime}</div>
+                <div className="text-[0.72rem] text-[#1C2420]">{p.origin} · {t("recommended.leadTime", "Lead time")} {p.leadTime}</div>
                 <h3 className="text-[0.9rem] font-bold text-[#0E241C] leading-[1.35] mt-1">{p.name}</h3>
                 <div className="flex items-center gap-1.5 text-[0.76rem] text-[#1C2420] mt-1.5">
                   <span className="text-[#17362A]">★★★★★</span> {p.rating}
