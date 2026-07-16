@@ -44,11 +44,11 @@ export default function Timeline({ home }: TimelineProps) {
           </div>
         </div>
 
-        <div className="relative pl-9">
-          <div className="absolute left-[11px] top-[6px] bottom-[6px] w-[2px] bg-[#F0EADB]" />
+        <div className="relative ps-9">
+          <div className="absolute start-[11px] top-[6px] bottom-[6px] w-[2px] bg-[#C9A853]/40" />
           {steps.map((s) => (
             <div key={s.title} className="relative pb-8 last:pb-0">
-              <div className="absolute -left-9 top-[2px] w-6 h-6 rounded-full bg-[#F0EADB] border-2 border-[#17362A]" />
+              <div className="absolute -start-9 top-[2px] w-6 h-6 rounded-full bg-[#F0EADB] border-2 border-[#17362A]" />
               <h3 className="text-[1rem] font-bold mb-1">{s.title}</h3>
               <p className="text-[0.9rem] text-[#1C2420]">{s.desc}</p>
             </div>
