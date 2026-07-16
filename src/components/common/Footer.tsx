@@ -133,7 +133,7 @@ export default function Footer({ lang, footer }: FooterProps) {
   const t = (key: string, fallback: string) => footer[key] ?? fallback;
 
   return (
-    <footer className="border-t border-[#F0EADB] py-8 sm:py-12 px-4 sm:px-7">
+    <footer className="bg-[#F0EADB] border-t border-[#F0EADB] py-8 sm:py-12 px-4 sm:px-7">
       <div className="max-w-[1280px] mx-auto">
         <div
           className="grid grid-cols-2 sm:grid-cols-3 lg:[grid-template-columns:220px_repeat(5,minmax(0,1fr))_200px] gap-x-8 gap-y-8 pb-10"

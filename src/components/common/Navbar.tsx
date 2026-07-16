@@ -33,7 +33,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
   }, [mobileOpen]);
 
   return (
-    <nav className="sticky top-0 z-50 bg-[#FAF6EA]/92 border-b border-[#F0EADB] px-4 sm:px-7">
+    <nav className="sticky top-0 z-50 bg-[#F0EADB]/92 border-b border-[#F0EADB] px-4 sm:px-7">
       <div className="max-w-[1280px] mx-auto h-16 flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center gap-1.5 font-extrabold text-[1.05rem] no-underline flex-none">
           <img src={logo.src} alt="Zafir360" className="h-[40px] w-auto" />
@@ -172,9 +172,8 @@ export function Navbar({ lang, nav }: NavbarProps) {
       <div
         onClick={() => setMobileOpen(false)}
         aria-hidden="true"
-        className={`xl:hidden fixed inset-0 z-[110] bg-[#0E241C]/45 transition-opacity duration-300 ${
-          mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-        }`}
+        className={`xl:hidden fixed inset-0 z-[110] bg-[#0E241C]/45 transition-opacity duration-300 ${mobileOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+          }`}
       />
 
       {/* Slide-in drawer, half the mobile viewport width */}
@@ -182,9 +181,8 @@ export function Navbar({ lang, nav }: NavbarProps) {
         role="dialog"
         aria-modal="true"
         aria-label="Site menu"
-        className={`xl:hidden fixed top-0 right-0 z-[120] h-dvh w-1/2 min-w-[240px] max-w-[360px] bg-[#FAF6EA] border-l border-[#F0EADB] flex flex-col transition-transform duration-300 ease-out ${
-          mobileOpen ? "translate-x-0" : "translate-x-full"
-        }`}
+        className={`xl:hidden fixed top-0 right-0 z-[120] h-dvh w-1/2 min-w-[240px] max-w-[360px] bg-[#FAF6EA] border-l border-[#F0EADB] flex flex-col transition-transform duration-300 ease-out ${mobileOpen ? "translate-x-0" : "translate-x-full"
+          }`}
       >
         <div className="flex items-center justify-between px-4 h-16 border-b border-[#F0EADB] flex-none">
           <span className="font-extrabold text-[0.95rem] text-[#0E241C]">Menu</span>

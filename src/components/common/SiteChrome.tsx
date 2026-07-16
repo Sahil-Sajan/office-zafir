@@ -11,7 +11,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import { WishlistProvider } from "@/contexts/WishlistContext";
 import { CompareProvider } from "@/contexts/CompareContext";
 
-const CHROMELESS_ROUTES = ["/login", "/signup"];
+const CHROMELESS_ROUTES = ["/login", "/signup", "/dashboard"];
 
 interface SiteChromeProps {
   lang: string;
@@ -22,7 +22,7 @@ interface SiteChromeProps {
 
 export function SiteChrome({ lang, nav, footer, children }: SiteChromeProps) {
   const pathname = usePathname();
-  const isChromeless = CHROMELESS_ROUTES.some((route) => pathname === `/${lang}${route}`);
+  const isChromeless = CHROMELESS_ROUTES.some((route) => pathname.startsWith(`/${lang}${route}`));
 
   const toaster = (
     <Toaster
