@@ -72,7 +72,7 @@ export default function FeatureGrid({ home }: CapabilitiesProps) {
 
   return (
     <section className="py-16">
-      <div className="max-w-[1180px] mx-auto px-7">
+      <div className="max-w-[1190px] mx-auto px-7">
         <div className="flex flex-col items-center text-center mb-9">
           <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">
             {t("capabilities.eyebrow", "Capabilities at a glance")}
@@ -88,25 +88,25 @@ export default function FeatureGrid({ home }: CapabilitiesProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {categories.map((cat) => (
             <div
               key={cat.title}
-              className="bg-white border border-[#F0EADB] rounded-[16px] p-7 hover:border-[#17362A] hover:-translate-y-[3px] hover:shadow-[0_8px_24px_rgba(14,36,28,0.08)] transition-all duration-200"
+              className="bg-white border border-[#F0EADB] rounded-[12px] p-4 hover:border-[#17362A] hover:-translate-y-[3px] hover:shadow-[0_8px_24px_rgba(14,36,28,0.08)] transition-all duration-200"
             >
-              <div className="flex items-center gap-4 mb-3">
-                <div className="w-14 h-14 rounded-[14px] flex-none bg-[#F0EADB] text-[#234A3A] flex items-center justify-center scale-125">
+              <div className="flex items-center gap-3 mb-2">
+                <div className="w-9 h-9 rounded-[10px] flex-none bg-[#F0EADB] text-[#234A3A] flex items-center justify-center">
                   <cat.icon />
                 </div>
-                <h3 className="text-[1.15rem] font-bold">{cat.title}</h3>
+                <h3 className="text-[0.95rem] font-bold">{cat.title}</h3>
               </div>
               <div className="flex flex-col gap-[2px]">
                 {cat.items.map((item) => (
                   <div
                     key={item}
-                    className="flex items-start gap-3 py-[14px] pl-1 border-b border-[#F0EADB] text-[0.92rem] last:border-b-0"
+                    className="flex items-start gap-2 py-2 pl-1 border-b border-[#F0EADB] text-[0.8rem] last:border-b-0"
                   >
-                    <span className="w-5 h-5 rounded-full bg-[#F0EADB] text-[#17362A] flex items-center justify-center text-[0.7rem] font-extrabold flex-none mt-[2px]">
+                    <span className="w-4 h-4 rounded-full bg-[#F0EADB] text-[#17362A] flex items-center justify-center text-[0.6rem] font-extrabold flex-none mt-[2px]">
                       ✓
                     </span>
                     {item}

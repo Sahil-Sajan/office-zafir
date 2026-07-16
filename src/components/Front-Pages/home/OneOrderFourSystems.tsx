@@ -28,7 +28,7 @@ export default function Timeline({ home }: TimelineProps) {
     <section className="bg-[#F0EADB] border-y border-[#F0EADB] py-16">
       <div className="max-w-[1180px] mx-auto px-7">
         <div className="flex justify-between items-end gap-6 flex-wrap mb-9">
-          <div>
+          <div className="w-full text-center sm:w-auto sm:text-left">
             <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">
               {t("oneOrder.eyebrow", "One order, four systems")}
             </span>

@@ -190,7 +190,7 @@ export default function ProductGrid({ home, lang }: ListingProps) {
           </p>
         </div>
 
-        <div className="flex justify-center gap-2 flex-wrap mb-7" role="tablist" aria-label="Filter by tier">
+        <div className="grid grid-cols-2 sm:flex sm:justify-center gap-2 sm:flex-wrap mb-7" role="tablist" aria-label="Filter by tier">
           {tabs.map((tab) => (
             <button
               key={tab.key}
