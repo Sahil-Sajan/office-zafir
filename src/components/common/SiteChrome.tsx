@@ -11,7 +11,7 @@ import { CartProvider } from "@/contexts/CartContext";
 import { WishlistProvider } from "@/contexts/WishlistContext";
 import { CompareProvider } from "@/contexts/CompareContext";
 
-const CHROMELESS_ROUTES = ["/login", "/signup", "/dashboard"];
+const CHROMELESS_ROUTES = ["/login", "/signup", "/dashboard", "/forgot-password", "/verify-otp", "/reset-password"];
 
 interface SiteChromeProps {
   lang: string;

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 function GoogleIcon() {
@@ -23,10 +24,17 @@ function AppleIcon() {
 }
 
 export default function LoginForm({ lang }: { lang: string }) {
+  const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
 
   return (
-    <form className="flex flex-col gap-4 w-full" onSubmit={(e) => e.preventDefault()}>
+    <form
+      className="flex flex-col gap-4 w-full"
+      onSubmit={(e) => {
+        e.preventDefault();
+        router.push(`/${lang}/dashboard/seller`);
+      }}
+    >
       <div className="flex flex-col gap-[6px]">
         <label htmlFor="login-email" className="text-[0.82rem] font-semibold text-[#1C2420]">Email address</label>
         <input
@@ -41,7 +49,7 @@ export default function LoginForm({ lang }: { lang: string }) {
       <div className="flex flex-col gap-[6px]">
         <div className="flex items-center justify-between">
           <label htmlFor="login-password" className="text-[0.82rem] font-semibold text-[#1C2420]">Password</label>
-          <Link href={`/${lang}/login`} className="text-[0.78rem] text-[#234A3A] no-underline hover:underline">
+          <Link href={`/${lang}/forgot-password`} className="text-[0.78rem] text-[#234A3A] no-underline hover:underline">
             Forgot password?
           </Link>
         </div>
