@@ -59,7 +59,7 @@ export function LanguageSwitcher({ currentLang }: LanguageSwitcherProps) {
       {open && (
         <div
           role="listbox"
-          className="absolute left-1/2 -translate-x-1/2 top-full z-50 mt-1.5 w-40 rounded-[10px] border border-[#F0EADB] bg-white p-1.5 shadow-[0_16px_40px_rgba(14,36,28,0.12)]"
+          className="absolute right-0 top-full z-50 mt-1.5 w-40 rounded-[10px] border border-[#F0EADB] bg-white p-1.5 shadow-[0_16px_40px_rgba(14,36,28,0.12)]"
         >
           {locales.map((locale) => (
             <button
