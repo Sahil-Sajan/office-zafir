@@ -15,8 +15,11 @@ interface DashboardContextType {
   user: DashboardUser | null;
   activeRole: DashboardRole;
   sidebarCollapsed: boolean;
+  mobileSidebarOpen: boolean;
   switchRole: (role: DashboardRole) => void;
   toggleSidebar: () => void;
+  toggleMobileSidebar: () => void;
+  closeMobileSidebar: () => void;
   logout: () => void;
 }
 
@@ -66,9 +69,12 @@ export function DashboardProvider({ children }: { children: ReactNode }) {
     return false;
   });
 
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+
   useEffect(() => {
     const role = getInitialRole(pathname);
     setActiveRole(role);
+    setMobileSidebarOpen(false);
   }, [pathname]);
 
   useEffect(() => {
@@ -81,6 +87,8 @@ export function DashboardProvider({ children }: { children: ReactNode }) {
   };
 
   const toggleSidebar = () => setSidebarCollapsed((prev) => !prev);
+  const toggleMobileSidebar = () => setMobileSidebarOpen((prev) => !prev);
+  const closeMobileSidebar = () => setMobileSidebarOpen(false);
 
   const logout = () => {
     localStorage.removeItem("zafir360.sidebar.collapsed");
@@ -95,8 +103,11 @@ export function DashboardProvider({ children }: { children: ReactNode }) {
         user,
         activeRole,
         sidebarCollapsed,
+        mobileSidebarOpen,
         switchRole,
         toggleSidebar,
+        toggleMobileSidebar,
+        closeMobileSidebar,
         logout,
       }}
     >

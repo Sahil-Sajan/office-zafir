@@ -15,10 +15,10 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Badge } from "@/components/ui/badge";
-import { Bell, LogOut, Settings, User, Search } from "lucide-react";
+import { Bell, LogOut, Settings, User, Search, Menu } from "lucide-react";
 
 export function Topbar({ lang }: { lang: string }) {
-  const { user, activeRole, logout } = useDashboard();
+  const { user, activeRole, logout, toggleMobileSidebar } = useDashboard();
   const pathname = usePathname();
 
   const navItems = DASHBOARD_NAV_ITEMS[activeRole];
@@ -32,12 +32,21 @@ export function Topbar({ lang }: { lang: string }) {
     "Overview";
 
   return (
-    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-surface px-6">
-      <div className="flex items-center gap-4">
-        <h1 className="text-lg font-semibold text-foreground">{pageTitle}</h1>
+    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-border bg-surface px-4 sm:px-6">
+      <div className="flex items-center gap-3 min-w-0">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="lg:hidden shrink-0"
+          onClick={toggleMobileSidebar}
+          aria-label="Open menu"
+        >
+          <Menu className="h-5 w-5 text-muted-foreground" />
+        </Button>
+        <h1 className="text-lg font-semibold text-foreground truncate">{pageTitle}</h1>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-2 sm:gap-3">
         <div className="relative hidden md:block">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input

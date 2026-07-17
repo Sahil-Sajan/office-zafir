@@ -48,19 +48,30 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 export function Sidebar({ lang }: { lang: string }) {
   const pathname = usePathname();
-  const { activeRole, sidebarCollapsed, toggleSidebar } = useDashboard();
+  const { activeRole, sidebarCollapsed, mobileSidebarOpen, toggleSidebar, closeMobileSidebar } = useDashboard();
   const navItems = DASHBOARD_NAV_ITEMS[activeRole];
+  const showExpanded = mobileSidebarOpen || !sidebarCollapsed;
 
   return (
-    <aside
-      className={cn(
-        "fixed left-0 top-0 z-40 flex h-screen flex-col bg-sidebar text-sidebar-foreground transition-all duration-300",
-        sidebarCollapsed ? "w-[72px]" : "w-[260px]"
+    <>
+      {mobileSidebarOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/50 lg:hidden"
+          onClick={closeMobileSidebar}
+          aria-hidden="true"
+        />
       )}
-    >
+      <aside
+        className={cn(
+          "fixed left-0 top-0 z-50 flex h-screen flex-col bg-sidebar text-sidebar-foreground transition-all duration-300",
+          "lg:z-40",
+          mobileSidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
+          sidebarCollapsed ? "w-[260px] lg:w-[72px]" : "w-[260px]"
+        )}
+      >
       {/* Logo */}
       <div className="flex h-16 items-center justify-between border-b border-sidebar-border px-4">
-        {!sidebarCollapsed && (
+        {showExpanded && (
           <Link href={`/${lang}/dashboard/seller`} className="flex items-center gap-2">
             <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-sidebar-primary text-xs font-bold text-sidebar-primary-foreground">
               Z
@@ -70,14 +81,21 @@ export function Sidebar({ lang }: { lang: string }) {
         )}
         <button
           onClick={toggleSidebar}
-          className="flex h-8 w-8 items-center justify-center rounded-md hover:bg-sidebar-accent text-sidebar-foreground/60 hover:text-sidebar-foreground transition-colors"
+          className="hidden lg:flex h-8 w-8 items-center justify-center rounded-md hover:bg-sidebar-accent text-sidebar-foreground/60 hover:text-sidebar-foreground transition-colors"
         >
           {sidebarCollapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
+        </button>
+        <button
+          onClick={closeMobileSidebar}
+          aria-label="Close menu"
+          className="flex lg:hidden h-8 w-8 items-center justify-center rounded-md hover:bg-sidebar-accent text-sidebar-foreground/60 hover:text-sidebar-foreground transition-colors"
+        >
+          <ChevronLeft className="h-4 w-4" />
         </button>
       </div>
 
       {/* Role Switcher */}
-      {!sidebarCollapsed && (
+      {showExpanded && (
         <div className="px-3 py-3 border-b border-sidebar-border">
           <RoleSwitcher lang={lang} />
         </div>
@@ -104,7 +122,7 @@ export function Sidebar({ lang }: { lang: string }) {
                   )}
                 >
                   {Icon && <Icon className="h-5 w-5 shrink-0" />}
-                  {!sidebarCollapsed && <span>{item.label}</span>}
+                  {showExpanded && <span>{item.label}</span>}
                 </Link>
               </li>
             );
@@ -113,13 +131,14 @@ export function Sidebar({ lang }: { lang: string }) {
       </nav>
 
       {/* Footer */}
-      {!sidebarCollapsed && (
+      {showExpanded && (
         <div className="border-t border-sidebar-border p-4">
           <p className="text-xs text-sidebar-foreground/40">
             Zafir360 Dashboard v1.0
           </p>
         </div>
       )}
-    </aside>
+      </aside>
+    </>
   );
 }
