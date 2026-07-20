@@ -22,7 +22,7 @@ export default function CartList({ lang }: { lang: string }) {
   if (items.length === 0) {
     return (
       <div className="flex flex-col items-center justify-center text-center py-20 px-4">
-        <span className="mb-3 flex items-center justify-center [&_svg]:size-10">
+        <span className="mb-3 flex items-center justify-center [&_svg]:size-12">
           <ShoppingBag />
         </span>
         <h2 className="text-[1.15rem] font-bold text-[#0E241C]">Your basket is empty</h2>

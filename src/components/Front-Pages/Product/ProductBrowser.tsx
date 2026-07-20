@@ -194,7 +194,7 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
         type="checkbox"
         checked={checked}
         onChange={onChange}
-        className="size-[16px] rounded-[4px] border-[#F0EADB] text-[#17362A] accent-[#17362A] cursor-pointer"
+        className="size-[20px] rounded-[4px] border-[#F0EADB] text-[#17362A] accent-[#17362A] cursor-pointer"
       />
       {children}
     </label>
@@ -258,7 +258,7 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
                   aria-label="Search by voice"
                   title={voiceSupported ? "Search by voice" : "Voice search isn't supported in this browser"}
                   disabled={!voiceSupported}
-                  className={`size-8 flex items-center justify-center rounded-full text-[0.95rem] transition-colors duration-150 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer ${
+                    className={`size-10 flex items-center justify-center rounded-full text-[0.95rem] transition-colors duration-150 disabled:opacity-30 disabled:cursor-not-allowed cursor-pointer ${
                     listening ? "bg-[#B3422F] text-white animate-pulse" : "text-[#5B6961] hover:bg-[#F0EADB] hover:text-[#0E241C]"
                   }`}
                 >
@@ -269,7 +269,7 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
                   onClick={() => fileInputRef.current?.click()}
                   aria-label="Search by image"
                   title="Search by image"
-                  className="size-8 flex items-center justify-center rounded-full text-[0.95rem] text-[#5B6961] hover:bg-[#F0EADB] hover:text-[#0E241C] transition-colors duration-150 cursor-pointer"
+                  className="size-10 flex items-center justify-center rounded-full text-[0.95rem] text-[#5B6961] hover:bg-[#F0EADB] hover:text-[#0E241C] transition-colors duration-150 cursor-pointer"
                 >
                   <Camera />
                 </button>
@@ -286,7 +286,7 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
                   aria-label="Search by barcode"
                   aria-expanded={barcodeOpen}
                   title="Search by barcode / HS code"
-                  className={`size-8 flex items-center justify-center rounded-full text-[0.95rem] transition-colors duration-150 cursor-pointer ${
+                  className={`size-10 flex items-center justify-center rounded-full text-[0.95rem] transition-colors duration-150 cursor-pointer ${
                     barcodeOpen ? "bg-[#F0EADB] text-[#0E241C]" : "text-[#5B6961] hover:bg-[#F0EADB] hover:text-[#0E241C]"
                   }`}
                 >
@@ -419,7 +419,7 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
           <div>
             {filtered.length === 0 ? (
               <div className="flex flex-col items-center text-center py-16 px-6 bg-white border border-[#F0EADB] rounded-[12px]">
-                <span className="mb-3 flex items-center justify-center [&_svg]:size-8 text-[#5B6961]" aria-hidden="true">
+                <span className="mb-3 flex items-center justify-center [&_svg]:size-10 text-[#5B6961]" aria-hidden="true">
                   <Search />
                 </span>
                 <h2 className="text-[1.05rem] font-bold text-[#0E241C]">No products match your filters.</h2>
@@ -469,7 +469,7 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
                           toggleWishlist({ slug: p.slug, name: p.name, image: p.image, price: p.price, tier: p.tier });
                           toast(wasSaved ? "Removed from wishlist" : "Saved to wishlist", { icon: wasSaved ? "♡" : "♥" });
                         }}
-                        className={`absolute top-2.5 right-2.5 size-8 flex items-center justify-center rounded-full text-[0.95rem] shadow-[0_2px_8px_rgba(14,36,28,0.16)] transition-colors duration-150 cursor-pointer ${
+                        className={`absolute top-2.5 right-2.5 size-10 flex items-center justify-center rounded-full text-[0.95rem] shadow-[0_2px_8px_rgba(14,36,28,0.16)] transition-colors duration-150 cursor-pointer ${
                           isSaved(p.slug) ? "bg-[#B3422F] text-white" : "bg-white text-[#5B6961] hover:text-[#B3422F]"
                         }`}
                       >
@@ -499,12 +499,12 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
                           className="flex items-center gap-1.5 text-[0.72rem] text-[#5B6961] cursor-pointer select-none disabled:cursor-not-allowed disabled:opacity-40 bg-transparent border-none p-0"
                         >
                           <span
-                            className={`flex items-center justify-center size-[14px] rounded-[3px] border transition-colors duration-150 ${
+                            className={`flex items-center justify-center size-[18px] rounded-[3px] border transition-colors duration-150 ${
                               isComparing(p.slug) ? "bg-[#17362A] border-[#17362A] text-white" : "border-[#5B6961] bg-white"
                             }`}
                           >
                             {isComparing(p.slug) && (
-                              <svg viewBox="0 0 24 24" className="size-[10px]" fill="none" stroke="currentColor" strokeWidth={3}>
+                              <svg viewBox="0 0 24 24" className="size-[12px]" fill="none" stroke="currentColor" strokeWidth={3}>
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                               </svg>
                             )}

@@ -24,7 +24,7 @@ export default function VerifyBadge() {
                                 <button
                                     type="button"
                                     aria-label="What does Zafir360 Verified mean?"
-                                    className="flex items-center justify-center size-[18px] rounded-full border border-[#F0EADB]/50 text-[0.65rem] font-bold text-white/80 cursor-pointer"
+                                    className="flex items-center justify-center size-[24px] rounded-full border border-[#F0EADB]/50 text-[0.65rem] font-bold text-white/80 cursor-pointer"
                                 >
                                     ?
                                 </button>

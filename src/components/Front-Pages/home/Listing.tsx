@@ -266,12 +266,12 @@ export default function ProductGrid({ home, lang }: ListingProps) {
                     className="flex items-center gap-1 text-[0.66rem] text-[#5B6961] cursor-pointer select-none disabled:cursor-not-allowed disabled:opacity-40 bg-transparent border-none p-0"
                   >
                     <span
-                      className={`flex items-center justify-center size-[13px] rounded-[3px] border transition-colors duration-150 ${
+                      className={`flex items-center justify-center size-[16px] rounded-[3px] border transition-colors duration-150 ${
                         isComparing(p.slug) ? "bg-[#17362A] border-[#17362A] text-white" : "border-[#5B6961] bg-white"
                       }`}
                     >
                       {isComparing(p.slug) && (
-                        <svg viewBox="0 0 24 24" className="size-[9px]" fill="none" stroke="currentColor" strokeWidth={3}>
+                        <svg viewBox="0 0 24 24" className="size-[12px]" fill="none" stroke="currentColor" strokeWidth={3}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
                         </svg>
                       )}

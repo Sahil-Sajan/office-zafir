@@ -7,21 +7,21 @@ import { Mail, PhoneCall, MapPin } from "@/components/common/NavIcons"
 
 function WhatsAppIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="size-[15px]" fill="currentColor">
+    <svg viewBox="0 0 24 24" className="size-[20px]" fill="currentColor">
       <path d="M12.02 2C6.5 2 2 6.5 2 12.02c0 1.77.46 3.5 1.35 5.02L2 22l5.09-1.33a10 10 0 0 0 4.93 1.3h.01c5.51 0 10-4.5 10-10.02C22 6.5 17.53 2 12.02 2Zm0 18.13h-.01a8.1 8.1 0 0 1-4.14-1.13l-.3-.18-3.02.79.8-2.94-.19-.3a8.14 8.14 0 0 1-1.25-4.35c0-4.5 3.66-8.16 8.16-8.16 4.49 0 8.14 3.66 8.14 8.16 0 4.5-3.65 8.11-8.19 8.11Zm4.47-6.1c-.24-.12-1.44-.71-1.67-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.53.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.35-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.32-.75-1.81-.2-.48-.4-.41-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.44-.59 1.64-1.16.2-.57.2-1.06.14-1.16-.06-.1-.22-.16-.46-.28Z" />
     </svg>
   );
 }
 function LinkedInIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="size-[15px]" fill="currentColor">
+    <svg viewBox="0 0 24 24" className="size-[20px]" fill="currentColor">
       <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45Z" />
     </svg>
   );
 }
 function InstagramIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="size-[15px]" fill="none" stroke="currentColor" strokeWidth="1.8">
+    <svg viewBox="0 0 24 24" className="size-[20px]" fill="none" stroke="currentColor" strokeWidth="1.8">
       <rect x="3" y="3" width="18" height="18" rx="5" />
       <circle cx="12" cy="12" r="4" />
       <circle cx="17.2" cy="6.8" r="1" />
@@ -30,7 +30,7 @@ function InstagramIcon() {
 }
 function XIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="size-[13px]" fill="currentColor">
+    <svg viewBox="0 0 24 24" className="size-[16px]" fill="currentColor">
       <path d="M18.24 2.25h3.31l-7.23 8.26 8.5 11.24h-6.66l-5.22-6.82-5.97 6.82H1.66l7.73-8.83L1.25 2.25h6.83l4.72 6.24 5.44-6.24Zm-1.16 17.52h1.83L6.99 4.13H5.03l12.05 15.64Z" />
     </svg>
   );

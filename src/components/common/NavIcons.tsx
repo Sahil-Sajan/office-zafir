@@ -1,4 +1,4 @@
-const base = "size-[18px]";
+const base = "size-[24px]";
 
 export function Rocket() {
   return (

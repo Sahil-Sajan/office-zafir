@@ -71,7 +71,7 @@ export function FeedbackWidget() {
               type="button"
               onClick={close}
               aria-label="Close feedback form"
-              className="flex items-center justify-center size-8 rounded-[8px] text-white/70 hover:text-white hover:bg-white/10 transition-colors duration-150 cursor-pointer"
+              className="flex items-center justify-center size-10 rounded-[8px] text-white/70 hover:text-white hover:bg-white/10 transition-colors duration-150 cursor-pointer"
             >
               <CloseIcon />
             </button>

@@ -108,7 +108,7 @@ export default function WishlistBody({ lang }: { lang: string }) {
                     type="checkbox"
                     checked={item.alertPriceDrop}
                     onChange={(e) => setAlerts(item.slug, { alertPriceDrop: e.target.checked })}
-                    className="size-[14px] rounded-[3px] accent-[#17362A] cursor-pointer"
+                    className="size-[16px] rounded-[3px] accent-[#17362A] cursor-pointer"
                   />
                   Notify on price drop
                 </label>
@@ -117,7 +117,7 @@ export default function WishlistBody({ lang }: { lang: string }) {
                     type="checkbox"
                     checked={item.alertBackInStock}
                     onChange={(e) => setAlerts(item.slug, { alertBackInStock: e.target.checked })}
-                    className="size-[14px] rounded-[3px] accent-[#17362A] cursor-pointer"
+                    className="size-[16px] rounded-[3px] accent-[#17362A] cursor-pointer"
                   />
                   Notify when back in stock
                 </label>

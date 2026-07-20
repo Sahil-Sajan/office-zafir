@@ -73,7 +73,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
                               href={`/${lang}${item.href}`}
                               className="flex items-start gap-3 px-3 py-2 rounded-[8px] no-underline hover:bg-[#F0EADB] transition-colors duration-150"
                             >
-                              <span className="flex-none flex items-center justify-center size-9 rounded-[8px] border border-[#E2C368] bg-[#F0EADB] text-[#17362A]">
+                              <span className="flex-none flex items-center justify-center size-11 rounded-[8px] border border-[#E2C368] bg-[#F0EADB] text-[#17362A]">
                                 {Icon ? <Icon /> : null}
                               </span>
                               <span className="flex flex-col">
@@ -103,7 +103,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
             <Link
               href={`/${lang}/wishlist`}
               aria-label="Wishlist"
-              className="relative flex items-center justify-center size-8 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
+              className="relative flex items-center justify-center size-10 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
             >
               <Heart filled={wishlistCount > 0} />
               {wishlistCount > 0 && (
@@ -115,7 +115,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
             <Link
               href={`/${lang}/cart`}
               aria-label="Inquiry basket"
-              className="relative flex items-center justify-center size-8 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
+              className="relative flex items-center justify-center size-10 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
             >
               <ShoppingCart />
               {count > 0 && (
@@ -137,7 +137,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
             <Link
               href={`/${lang}/wishlist`}
               aria-label="Wishlist"
-              className="relative flex items-center justify-center size-8 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
+              className="relative flex items-center justify-center size-10 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
             >
               <Heart filled={wishlistCount > 0} />
               {wishlistCount > 0 && (
@@ -149,7 +149,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
             <Link
               href={`/${lang}/cart`}
               aria-label="Inquiry basket"
-              className="relative flex items-center justify-center size-8 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
+              className="relative flex items-center justify-center size-10 rounded-[6px] border border-[#F0EADB] bg-white text-[#0E241C] hover:border-[#17362A] transition-colors duration-150"
             >
               <ShoppingCart />
               {count > 0 && (
@@ -160,7 +160,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
             </Link>
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="flex size-8 items-center justify-center rounded-md text-lg text-[#1C2420]"
+              className="flex size-10 items-center justify-center rounded-md text-lg text-[#1C2420]"
               aria-label="Toggle menu"
             >
               {mobileOpen ? <Close /> : <Menu />}
@@ -189,7 +189,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
           <span className="font-extrabold text-[0.95rem] text-[#0E241C]">Menu</span>
           <button
             onClick={() => setMobileOpen(false)}
-            className="flex size-8 items-center justify-center rounded-md text-lg text-[#1C2420]"
+            className="flex size-10 items-center justify-center rounded-md text-lg text-[#1C2420]"
             aria-label="Close menu"
           >
             <Close />

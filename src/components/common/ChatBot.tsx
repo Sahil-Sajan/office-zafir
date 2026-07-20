@@ -18,7 +18,7 @@ const INITIAL_MESSAGE: Message = {
 
 function ChatIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className="size-6" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" className="size-8" aria-hidden="true">
       <path
         d="M4 12c0-4.42 3.58-8 8-8s8 3.58 8 8-3.58 8-8 8c-1.13 0-2.2-.23-3.18-.66L4 20l1.02-4.36A7.94 7.94 0 0 1 4 12Z"
         stroke="currentColor"
@@ -35,7 +35,7 @@ function ChatIcon() {
 
 function CloseIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className="size-6" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" className="size-8" aria-hidden="true">
       <path d="M6 6l12 12M18 6 6 18" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" />
     </svg>
   );
@@ -43,7 +43,7 @@ function CloseIcon() {
 
 function SendIcon() {
   return (
-    <svg viewBox="0 0 24 24" fill="none" className="size-[18px]" aria-hidden="true">
+    <svg viewBox="0 0 24 24" fill="none" className="size-[24px]" aria-hidden="true">
       <path d="M4 12h15.5M13 5.5 19.5 12 13 18.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
     </svg>
   );
@@ -111,7 +111,7 @@ export function ChatBot() {
         >
           <div className="flex items-center justify-between gap-3 px-4 py-3.5 bg-[#0E241C] text-white flex-none">
             <div className="flex items-center gap-2.5 min-w-0">
-              <span className="relative flex-none flex items-center justify-center size-9 rounded-full bg-[#17362A] text-white">
+              <span className="relative flex-none flex items-center justify-center size-11 rounded-full bg-[#17362A] text-white">
                 <ChatIcon />
                 <span className="absolute -bottom-0.5 -right-0.5 size-2.5 rounded-full bg-[#17362A] border-2 border-[#0E241C]" aria-hidden="true" />
               </span>
@@ -124,7 +124,7 @@ export function ChatBot() {
               type="button"
               onClick={() => setOpen(false)}
               aria-label="Close chat"
-              className="flex-none flex items-center justify-center size-8 rounded-[8px] text-white/70 hover:text-white hover:bg-white/10 transition-colors duration-150 cursor-pointer"
+              className="flex-none flex items-center justify-center size-10 rounded-[8px] text-white/70 hover:text-white hover:bg-white/10 transition-colors duration-150 cursor-pointer"
             >
               <CloseIcon />
             </button>
@@ -186,7 +186,7 @@ export function ChatBot() {
               type="submit"
               aria-label="Send message"
               disabled={!input.trim()}
-              className="flex-none flex items-center justify-center size-10 rounded-full bg-[#17362A] text-white hover:bg-[#234A3A] disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-150 cursor-pointer"
+              className="flex-none flex items-center justify-center size-12 rounded-full bg-[#17362A] text-white hover:bg-[#234A3A] disabled:opacity-40 disabled:cursor-not-allowed transition-colors duration-150 cursor-pointer"
             >
               <SendIcon />
             </button>
@@ -199,7 +199,7 @@ export function ChatBot() {
         onClick={() => setOpen((v) => !v)}
         aria-label={open ? "Close chat assistant" : "Open chat assistant"}
         aria-expanded={open}
-        className="flex items-center justify-center size-14 rounded-full bg-[#17362A] text-white shadow-[0_10px_30px_rgba(23,54,42,0.35)] hover:bg-[#234A3A] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer motion-reduce:transition-none"
+        className="flex items-center justify-center size-16 rounded-full bg-[#17362A] text-white shadow-[0_10px_30px_rgba(23,54,42,0.35)] hover:bg-[#234A3A] hover:-translate-y-0.5 active:translate-y-0 transition-all duration-200 cursor-pointer motion-reduce:transition-none"
       >
         {open ? <CloseIcon /> : <ChatIcon />}
       </button>
