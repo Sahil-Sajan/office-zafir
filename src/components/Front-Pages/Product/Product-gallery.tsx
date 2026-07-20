@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { ProductData } from "./products-data";
 
 export default function ProductGallery({ product }: { product: ProductData }) {
@@ -9,7 +10,7 @@ export default function ProductGallery({ product }: { product: ProductData }) {
   return (
     <div onMouseDown={(e) => { if (e.button === 1) e.preventDefault(); }}>
       <div className="relative aspect-square rounded-[16px] overflow-hidden border border-[#F0EADB]">
-        <img src={activeImage} alt={product.name} className="w-full h-full object-cover" />
+        <Image src={activeImage} alt={product.name} fill sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" priority />
         <div className="absolute top-3 left-3 flex flex-col gap-1.5">
           {product.badges.map((b) => (
             <span
@@ -28,11 +29,11 @@ export default function ProductGallery({ product }: { product: ProductData }) {
             type="button"
             onClick={() => setActiveImage(img)}
             aria-label={`View image ${i + 1}`}
-            className={`flex-none w-[64px] h-[64px] rounded-[8px] overflow-hidden border cursor-pointer transition-colors duration-150 ${
+            className={`relative flex-none w-[64px] h-[64px] rounded-[8px] overflow-hidden border cursor-pointer transition-colors duration-150 ${
               activeImage === img ? "border-[#17362A] border-2" : "border-[#F0EADB] hover:border-[#17362A]"
             }`}
           >
-            <img src={img} alt="" className="w-full h-full object-cover" />
+            <Image src={img} alt="" fill sizes="64px" className="object-cover" />
           </button>
         ))}
       </div>

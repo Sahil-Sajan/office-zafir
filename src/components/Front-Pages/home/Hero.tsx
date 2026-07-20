@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { hero1, hero2 } from "@/utils/images"
 import { navIcons, Search } from "@/components/common/NavIcons"
 
@@ -116,8 +117,8 @@ export default function Hero({ home, lang }: HeroProps) {
         </div>
 
         <div className="hidden lg:flex items-start justify-center mt-9 perspective-[1400px]">
-          <img
-            src={hero2.src}
+          <Image
+            src={hero2}
             alt=""
             className="w-full max-w-[560px] h-auto rounded-[18px] transition-transform duration-400 ease hover:rotate-y-[-8deg] hover:rotate-x-[4deg] hover:-translate-y-1"
             style={{

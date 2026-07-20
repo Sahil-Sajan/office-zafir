@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { categories, chero } from "@/utils/images"
 import { Search } from "@/components/common/NavIcons"
 
@@ -29,8 +30,8 @@ export default function CategoriesHero() {
                 </div>
 
                 <div className="hidden lg:flex items-start justify-center mt-9 perspective-[1400px]">
-                    <img
-                        src={chero.src}
+                    <Image
+                        src={chero}
                         alt=""
                         className="w-full max-w-[560px] h-auto rounded-[18px] transition-transform duration-400 ease hover:rotate-y-[-8deg] hover:rotate-x-[4deg] hover:-translate-y-1"
                         style={{

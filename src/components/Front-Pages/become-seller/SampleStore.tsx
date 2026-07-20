@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { fridge, induction, stainless, cottonblend } from "@/utils/images"
 
 export default function SampleStorefront() {
@@ -65,7 +66,7 @@ export default function SampleStorefront() {
                                     key={img}
                                     className="aspect-square rounded-[6px] overflow-hidden relative"
                                 >
-                                    <img src={img} alt="" className="w-full h-full object-cover" />
+                                    <Image src={img} alt="" fill sizes="(min-width: 640px) 25vw, 50vw" className="object-cover" />
                                     <span className="absolute bottom-0 left-0 right-0 px-2 py-[6px] text-[0.7rem] font-semibold text-white" style={{ background: "linear-gradient(0deg, rgba(0,0,0,0.55), transparent)" }}>
                                         {["Storefront", "Packaging", "Dispatch", "Invoices"][i]}
                                     </span>

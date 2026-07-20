@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { navEntries } from "@/config/navigation";
 import { navIcons, Heart, ShoppingCart, Menu, Close } from "./NavIcons";
 import { LanguageSwitcher } from "./LanguageSwitcher";
@@ -36,7 +37,7 @@ export function Navbar({ lang, nav }: NavbarProps) {
     <nav className="sticky top-0 z-50 bg-[#F0EADB]/92 border-b border-[#F0EADB] px-4 sm:px-7">
       <div className="max-w-[1280px] mx-auto h-16 flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center gap-1.5 font-extrabold text-[1.05rem] no-underline flex-none">
-          <img src={logo.src} alt="Zafir360" className="h-[40px] w-auto" />
+          <Image src={logo} alt="Zafir360" className="h-[40px] w-auto" priority />
           Zafir360
         </Link>
 

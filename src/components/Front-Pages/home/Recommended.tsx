@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { getAllProducts, ProductData } from "@/components/Front-Pages/Product/products-data";
 
 const tierTagColors: Record<ProductData["tier"], string> = {
@@ -54,7 +55,7 @@ export default function Recommended({ lang, home }: { lang: string; home: Record
               className="bg-white border border-[#F0EADB] rounded-[10px] overflow-hidden flex flex-col no-underline hover:-translate-y-[3px] hover:shadow-[0_8px_24px_rgba(14,36,28,0.08)] transition-all duration-250"
             >
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+                <Image src={p.image} alt={p.name} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
                 <span className={`absolute top-2.5 left-2.5 ${p.badges[0].color} text-white text-[0.66rem] font-bold uppercase tracking-[0.03em] px-2 py-[3px] rounded`}>
                   {p.badges[0].label}
                 </span>

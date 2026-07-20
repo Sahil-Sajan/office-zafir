@@ -2,6 +2,7 @@
 
 import { useMemo, useRef, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import type { ProductData, CategoryInfo } from "./products-data";
@@ -449,7 +450,7 @@ export default function ProductBrowser({ lang, products, mode, categories = [], 
                     className="bg-white border border-[#F0EADB] rounded-[10px] overflow-hidden flex flex-col no-underline hover:-translate-y-[3px] hover:shadow-[0_8px_24px_rgba(14,36,28,0.08)] transition-all duration-250 cursor-pointer"
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+                      <Image src={p.image} alt={p.name} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
                       <div className="absolute top-2.5 left-2.5 flex flex-col gap-1">
                         {p.badges.map((b) => (
                           <span key={b.label} className={`${b.color} text-white text-[0.62rem] font-bold uppercase tracking-[0.03em] px-1.5 py-[2px] rounded`}>

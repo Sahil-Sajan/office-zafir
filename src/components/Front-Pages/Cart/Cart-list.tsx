@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCart } from "@/contexts/CartContext";
 import { ShoppingBag } from "@/components/common/NavIcons";
 
@@ -45,8 +46,8 @@ export default function CartList({ lang }: { lang: string }) {
           key={`${item.slug}-${item.variant}`}
           className="flex gap-3 sm:gap-4 items-center border border-[#F0EADB] rounded-[12px] p-3 sm:p-4"
         >
-          <Link href={`/${lang}/product/${item.slug}`} className="flex-none">
-            <img src={item.image} alt={item.name} className="size-[64px] sm:size-[80px] rounded-[8px] object-cover border border-[#F0EADB]" />
+          <Link href={`/${lang}/product/${item.slug}`} className="relative flex-none size-[64px] sm:size-[80px]">
+            <Image src={item.image} alt={item.name} fill sizes="80px" className="rounded-[8px] object-cover border border-[#F0EADB]" />
           </Link>
           <div className="flex-1 min-w-0">
             <div className="flex items-center gap-2 flex-wrap">

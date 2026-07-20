@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useCompare } from "@/contexts/CompareContext";
 import { getProduct } from "@/components/Front-Pages/Product/products-data";
 
@@ -71,7 +72,9 @@ export default function CompareTable({ lang }: { lang: string }) {
                     >
                       ✕
                     </button>
-                    <img src={p.image} alt={p.name} className="w-full aspect-[4/3] object-cover rounded-[6px]" />
+                    <div className="relative w-full aspect-[4/3]">
+                      <Image src={p.image} alt={p.name} fill sizes="200px" className="object-cover rounded-[6px]" />
+                    </div>
                     <span className={`inline-block mt-2 ${tierMeta[p.tier].color} text-[0.6rem] font-bold uppercase tracking-[0.03em] px-1.5 py-[2px] rounded`}>
                       {tierMeta[p.tier].label}
                     </span>

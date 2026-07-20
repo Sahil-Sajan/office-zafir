@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { useWishlist } from "@/contexts/WishlistContext";
 import { useCart } from "@/contexts/CartContext";
 
@@ -90,7 +91,7 @@ export default function WishlistBody({ lang }: { lang: string }) {
         {visible.map((item) => (
           <div key={item.slug} className="bg-white border border-[#F0EADB] rounded-[10px] overflow-hidden flex flex-col">
             <Link href={`/${lang}/product/${item.slug}`} className="relative aspect-[4/3] overflow-hidden block">
-              <img src={item.image} alt={item.name} className="w-full h-full object-cover" />
+              <Image src={item.image} alt={item.name} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
             </Link>
             <div className="p-3.5 flex flex-col gap-1.5 flex-1">
               <span className={`self-start ${tierMeta[item.tier].color} text-[0.6rem] font-bold uppercase tracking-[0.03em] px-1.5 py-[2px] rounded`}>

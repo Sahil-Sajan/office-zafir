@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import toast from "react-hot-toast"
 import { stainless, induction, cottonblend, refrigerator, castIron2, portable2000w, towel2, fridge } from "@/utils/images"
 import { useCart } from "@/contexts/CartContext"
@@ -216,7 +217,7 @@ export default function ProductGrid({ home, lang }: ListingProps) {
               className="bg-white border border-[#F0EADB] rounded-[10px] overflow-hidden flex flex-col"
             >
               <div className="relative aspect-[4/3] bg-gradient-to-br from-[#F0EADB] to-[#F0EADB] overflow-hidden">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover" />
+                <Image src={p.image} alt={p.name} fill sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw" className="object-cover" />
                 <div className="absolute top-2 left-2 flex flex-col gap-1">
                   {p.badges.map((b) => (
                     <span

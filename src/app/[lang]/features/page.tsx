@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getDictionary, hasLocale } from "@/utils/getDictionary";
-import { AboutView } from '@/views/front-pages/AboutView';
+
 import { FeaturesView } from "@/views/front-pages/FeautresView";
 
 export const metadata: Metadata = {
   title: "Platform Features for Wholesale, Sellers & Buyers | Zafir360",
 };
 
-export default async function AboutPage({ params }: PageProps<'/[lang]/about'>) {
+export default async function FeaturesPage({ params }: PageProps<'/[lang]/features'>) {
   const { lang } = await params;
   if (!hasLocale(lang)) notFound();
   const dict = await getDictionary(lang);

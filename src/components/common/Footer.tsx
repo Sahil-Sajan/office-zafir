@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import { logo } from "@/utils/images"
 import { Mail, PhoneCall, MapPin } from "@/components/common/NavIcons"
 
@@ -140,7 +141,7 @@ export default function Footer({ lang, footer }: FooterProps) {
         >
           <div className="col-span-2 sm:col-span-3 lg:col-span-1">
             <Link href="/" className="flex items-center gap-1.5 font-extrabold text-[1.05rem] tracking-tight no-underline text-[#0E241C]">
-              <img src={logo.src} alt="Zafir360" className="h-[26px] w-auto flex-none" />
+              <Image src={logo} alt="Zafir360" className="h-[26px] w-auto flex-none" />
               Zafir360
             </Link>
             <p className="text-[0.9rem] text-[#1C2420] mt-[14px] leading-[1.65]">
