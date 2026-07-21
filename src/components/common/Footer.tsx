@@ -181,7 +181,7 @@ export default function Footer({ lang, footer }: FooterProps) {
 
           {footerSections.map((section) => (
             <div key={section.titleKey} className="min-w-0">
-              <h4 className="text-[0.8rem] uppercase tracking-[0.05em] text-[#1C2420] mb-[14px] font-bold">
+              <h4 className="text-[0.68rem] uppercase tracking-[0.03em] text-[#1C2420] mb-[14px] font-bold whitespace-nowrap">
                 {t(section.titleKey, section.titleKey)}
               </h4>
               <ul className="list-none m-0 p-0 flex flex-col gap-[9px]">
