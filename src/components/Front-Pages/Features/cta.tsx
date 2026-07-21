@@ -2,7 +2,7 @@ import Link from "next/link"
 
 export default function GlobalCTA() {
     return (
-        <section className="py-14 sm:py-20">
+        <section className="py-12 sm:py-16">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="relative overflow-hidden text-center flex flex-col items-center bg-[#0E241C] text-white rounded-[20px] p-6 sm:p-12 lg:p-16">
                     <div className="absolute top-0 right-0 w-60 h-60 bg-[rgba(23,54,42,0.08)] rounded-full blur-[60px] pointer-events-none translate-x-[30%] -translate-y-[30%]" />

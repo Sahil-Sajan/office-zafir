@@ -1,6 +1,6 @@
 export default function DashboardKPI() {
     return (
-        <section className="py-11">
+        <section className="py-16">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="flex justify-between items-end gap-6 flex-wrap mb-9">
                     <div>

@@ -1,6 +1,6 @@
 export default function BuiltForBusiness() {
     return (
-        <section className="py-14 sm:py-20">
+        <section className="py-12 sm:py-16">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7 text-center">
                 <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">
                     Built for Modern Businesses

@@ -94,7 +94,7 @@ export default function DeepDiveTabs({ features = {} }: DeepDiveTabsProps) {
     const t = (key: string, fallback: string) => features[key] ?? fallback;
 
     return (
-        <section className="py-20 border-b border-[#F0EADB]">
+        <section className="py-16 border-b border-[#F0EADB]">
             <div className="max-w-[1180px] mx-auto px-7">
                 <div className="mb-10 flex flex-col items-center text-center">
                     <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">

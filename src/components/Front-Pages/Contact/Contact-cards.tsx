@@ -33,7 +33,7 @@ const cards = [
 
 export default function ContactCards() {
     return (
-        <section className="py-14">
+        <section className="py-12 sm:py-16">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="gap-px border border-[#F0EADB] rounded-[10px] overflow-hidden bg-[#F0EADB] grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
                     {cards.map((c) => (

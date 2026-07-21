@@ -25,7 +25,7 @@ const features = [
 
 export default function ScaleFeatures() {
     return (
-        <section className="py-20">
+        <section className="py-16">
             <div className="max-w-[1180px] mx-auto px-7 text-center">
                 <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">
                     Everything You Need to Scale

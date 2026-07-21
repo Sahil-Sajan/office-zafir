@@ -24,7 +24,7 @@ const categories = [
 
 export default function CategoryExplore() {
     return (
-        <section className="py-14 sm:py-20 bg-[#F0EADB]">
+        <section className="py-12 sm:py-16 bg-[#F0EADB]">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="flex flex-col sm:flex-row sm:items-end items-start justify-between gap-4 sm:gap-6 flex-wrap mb-8 sm:mb-12">
                     <div>

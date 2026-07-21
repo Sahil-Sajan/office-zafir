@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "spacing-system": {
+      "source": "owl-listener/designer-skills",
+      "sourceType": "github",
+      "skillPath": "ui-design/skills/spacing-system/SKILL.md",
+      "computedHash": "4960331cd1d675b0246774ee8ab380ff379d21bb1adaec3e6e30e5d30a295a90"
+    }
+  }
+}

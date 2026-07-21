@@ -9,7 +9,7 @@ const rows = [
 
 export default function ArchetypeTable() {
     return (
-        <section className="py-14 sm:py-20 bg-[#F0EADB] border-t border-[#F0EADB] border-b border-[#F0EADB]">
+        <section className="py-12 sm:py-16 bg-[#F0EADB] border-t border-[#F0EADB] border-b border-[#F0EADB]">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="mb-9 flex flex-col items-center text-center">
                     <span className="text-[0.78rem] font-semibold tracking-[0.08em] uppercase text-[#C9A853]">

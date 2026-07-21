@@ -18,7 +18,7 @@ const cards = [
 
 export default function ProtocolFeatures() {
     return (
-        <section className="py-8 sm:py-11">
+        <section className="py-12 sm:py-16">
             <div className="max-w-[1180px] mx-auto px-4 sm:px-7">
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-[1px] border border-[#F0EADB] rounded-[10px] overflow-hidden bg-[#F0EADB]">
                     {cards.map((c) => (
