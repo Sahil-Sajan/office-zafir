@@ -16,7 +16,7 @@ export default function CategoriesHero() {
                     <p className="text-[1.1rem] text-[#1C2420] max-w-[640px] leading-[1.65]">
                         The protocol is live — curating access to exceptional pieces across apparel, hardware, and private archives. Every item passes human review before it reaches you.
                     </p>
-                    <div className="flex items-center gap-2 sm:gap-3 mt-6 border border-[#F0EADB] rounded-[999px] p-[4px] pl-[16px] focus-within:border-[#17362A] focus-within:shadow-[0_0_0_4px_#F0EADB] transition-all duration-200">
+                    <div className="flex items-center gap-2 sm:gap-3 mt-6 bg-white border border-[#F0EADB] rounded-[999px] p-[4px] pl-[16px] focus-within:border-[#17362A] focus-within:shadow-[0_0_0_4px_#F0EADB] transition-all duration-200">
                         <span><Search /></span>
                         <input type="search" placeholder="Search by aesthetic, technical spec, or heritage…" className="flex-1 min-w-0 bg-transparent border-none py-[10px] text-[0.85rem] sm:text-[0.9rem] outline-none text-[#0E241C] placeholder-[#5B6961]" />
                         <span className="hidden sm:inline text-[0.78rem] font-semibold text-[#1C2420] bg-[#F0EADB] px-3 py-1.5 rounded-[999px] whitespace-nowrap">All Collections ▾</span>
